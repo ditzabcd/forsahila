@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>😔 Halaman Istirahat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* BACKGROUND BELAH KIRI HITAM, KANAN PUTIH */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background-color: #000000;  /* hitam solid */
+            z-index: 0;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background-color: #ffffff;  /* putih solid */
+            z-index: 0;
+        }
+
+        /* KOTAK PESAN DI TENGAH (GABUNG) */
+        .message-card {
+            position: relative;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: 2rem;
+            padding: 2rem 2.2rem;
+            max-width: 500px;
+            width: 85%;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .message-card h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #fff0e6;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.3px;
+        }
+
+        .message-card p {
+            font-size: 1.3rem;
+            color: #ffd9c5;
+            font-weight: 500;
+        }
+
+        /* efek transisi halus */
+        @media (max-width: 600px) {
+            .message-card {
+                padding: 1.6rem 1.4rem;
+                width: 90%;
+            }
+            .message-card h1 {
+                font-size: 1.8rem;
+            }
+            .message-card p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="message-card">
+    <h1>💔 maaf ya</h1>
+    <p>udah gabisa 💬</p>
+</div>
+
+<!-- optional: sentuhan kecil biar ga error js -->
+<script>
+    // gak ada error, gak ganggu website asli
+    console.log("halaman pengganti aktif - website asli tidak dihapus");
+</script>
+</body>
+</html>
